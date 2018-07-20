@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  content-path: /
+
+spring:
+  application:
+    name: swagger2markdown
+  velocity:
+    charset: UTF-8
+    properties:
+      tools.view.servlet.layout.directory: /layout/
+      tools.view.servlet.error.template: error.vm
+      tools.view.servlet.layout.default.template: default.vm
+      velocimacro.library: macro/velocity_macro.vm
+      velocimacro.library.autoreload: true
+      runtime.log.logsystem.class: org.springframework.ui.velocity.CommonsLoggingLogSystem
+    toolbox-config-location: /velocity/velocity-toolbox.xml
